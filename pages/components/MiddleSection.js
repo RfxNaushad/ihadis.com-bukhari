@@ -114,8 +114,8 @@ const MiddleSection = () => {
             <div
               key={index}
               className="flex justify-between items-center bg-white border p-6 rounded hover:bg-green-100"
-              onMouseEnter={() => setHoveredItem(index)} // Set the hover state to the current item
-              onMouseLeave={() => setHoveredItem(null)} // Reset hover state when leaving
+              onMouseEnter={() => setHoveredItem(index)} 
+              onMouseLeave={() => setHoveredItem(null)}
             >
               {/* Hexagon with Hover-Dependent Color */}
               <div className="flex items-center space-x-4">
