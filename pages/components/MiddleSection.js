@@ -45,7 +45,7 @@ const MiddleSection = () => {
         <div className="flex xl:hidden items-center">
           <FontAwesomeIcon icon={faBars} width={20}
             height={20}/>
-          <span className="text-lg font-semibold">555</span>
+          <h2 className="text-sm text-black font-semibold">সহিহ বুখারী</h2>
         </div>
       </div>
 
