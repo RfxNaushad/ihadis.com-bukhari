@@ -92,7 +92,7 @@ function HomePage({ categories, subCategories, duas }) {
       </section>
 
       {/* Middle Section - Takes full width when Right Section is hidden */}
-      <section className="w-full xl:w-3/4 2xl:w-2/4 bg-gray-100 p-4 border-r">
+      <section className="w-full xl:w-3/4 2xl:w-2/4 bg-gray-100 pl-4 pt-4">
         <MiddleSection />
       </section>
 

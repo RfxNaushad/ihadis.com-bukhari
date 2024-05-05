@@ -142,7 +142,7 @@ const LeftSection = ({ isSidebarOpen }) => {
     <div className="hidden xl:block rounded-2xl bg-white h-full">
       <div className="flex mb-4">
         <button
-          className="rounded-tl-2xl text-xl px-4 py-3 flex-1 border-b border-gray divide-solid"
+          className="rounded-tl-2xl text-base px-4 py-3 flex-1 border-b border-gray divide-solid"
           style={{
             backgroundColor: filterType === "বই" ? "#2B9E76" : undefined,
             color: filterType === "বই" ? "white" : "black",
@@ -153,7 +153,7 @@ const LeftSection = ({ isSidebarOpen }) => {
         </button>
 
         <button
-          className="px-4 py-3 rounded-tr-xl text-xl flex-1 border-b border-gray divide-solid"
+          className="px-4 py-3 rounded-tr-xl text-base flex-1 border-b border-gray divide-solid"
           style={{
             backgroundColor: filterType === "অধ্যায়" ? "#2B9E76" : undefined,
             color: filterType === "অধ্যায়" ? "white" : "black",

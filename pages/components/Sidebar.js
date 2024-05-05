@@ -90,7 +90,7 @@ const Sidebar = () => {
         >
           {React.cloneElement(item.icon, {
             style: { fontSize: '35px' },
-            className: `transition-colors ${hoveredIcon === item.id ? 'text-green-500' : 'text-black'}`, // Change color based on hover
+            className: `transition-colors ${hoveredIcon === item.id ? 'text-[#2B9E76]' : 'text-black'}`, // Change color based on hover
           })}
         </div>
       ))}

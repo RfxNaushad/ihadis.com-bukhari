@@ -55,7 +55,7 @@ const Navbar = () => {
         </button>
         
         {/* Support button for larger screens */}
-        <button className=" text-white px-4 py-3 rounded-lg flex items-center space-x-2 hidden md:block" style={{backgroundColor: "#2B9E76"}}>
+        <button className="text-white px-4 py-3 rounded-lg flex items-center space-x-2 hidden md:block" style={{backgroundColor: "#2B9E76"}}>
           <span>সাপোর্ট করুন</span>
           <FontAwesomeIcon icon={faHandHoldingHeart} />
         </button>

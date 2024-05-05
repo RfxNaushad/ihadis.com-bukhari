@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBook, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faBars,faBook, faSearch,faArrowRightArrowLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import Hexagon from "./Hexagon";
+
 
 const MiddleSection = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -11,109 +12,84 @@ const MiddleSection = () => {
 
   const data = {
     bukhari: [
-      { serial: 1, title: "Title 1", range: "১ - ৭" },
-      { serial: 2, title: "Title 2", range: "৮ - ১৪" },
-      { serial: 3, title: "Title 3", range: "১৫ - ২১" },
-      { serial: 1, title: "Title 1", range: "১ - ৭" },
-      { serial: 2, title: "Title 2", range: "৮ - ১৪" },
-      { serial: 3, title: "Title 3", range: "১৫ - ২১" },
-      { serial: 1, title: "Title 1", range: "১ - ৭" },
-      { serial: 2, title: "Title 2", range: "৮ - ১৪" },
-      { serial: 3, title: "Title 3", range: "১৫ - ২১" },
-      { serial: 1, title: "Title 1", range: "১ - ৭" },
-      { serial: 2, title: "Title 2", range: "৮ - ১৪" },
-      { serial: 3, title: "Title 3", range: "১৫ - ২১" },
-      { serial: 1, title: "Title 1", range: "১ - ৭" },
-      { serial: 2, title: "Title 2", range: "৮ - ১৪" },
-      { serial: 3, title: "Title 3", range: "১৫ - ২১" },
-      { serial: 1, title: "Title 1", range: "১ - ৭" },
-      { serial: 2, title: "Title 2", range: "৮ - ১৪" },
-      { serial: 3, title: "Title 3", range: "১৫ - ২১" },
+      { serial: 1, title: "ওহীর সূচনা অধ্যায়", range: "১ - ৭" },
+      { serial: 2, title: "ঈমান", range: "৮ - ৫৮" },
+      { serial: 3, title: "ইল্‌ম", range: "৫৯ - ১৩৪" },
+      { serial: 4, title: "ওজু", range: "১৩৫ - ২৪৭" },
+      { serial: 5, title: "গুস্‌ল", range: "২৪৮ - ৩১০" },
+      { serial: 6, title: "তায়াম্মুম", range: "৩১১ - ৩৫০" },
+      { serial: 7, title: "নামাজ", range: "৩৫১ - ৫০০" },
+      { serial: 8, title: "যাকাত", range: "৫০১ - ৬০০" },
+      { serial: 9, title: "সাওম", range: "৬০১ - ৭০০" },
+      { serial: 10, title: "হজ", range: "৭০১ - ৭৫০" },
     ],
   };
 
   return (
-    <section
-      className="bg-gray-100 h-[calc(100vh-191px)] lg-min:bg-white rounded-t-none rounded-b-xl w-full xss:mb-10 
-    xss:rounded-xl xss:mt-4 xs:rounded-xl sm:rounded-xl 
-    md:mt-1 md:rounded-xl lg:rounded-xl scroll-mt-20"
-    >
-      <div className="flex items-center p-4">
+    <section className="bg-gray-100 h-[calc(100vh-167px)] lg-min:bg-white rounded-tl-2xl rounded-tr-2xl w-full xss:mb-10 scroll-mt-20">
+      <div className="flex items-center rounded-tl-2xl rounded-tr-2xl bg-white px-6 py-4 border-b-2">
         {/* This section is visible from 1280px and hidden below */}
         <div className="hidden xl:flex items-center">
-          {" "}
-          {/* Use `xl:flex` to show only from 1280px onwards */}
           <Image
             src="/bread-crumb-book.svg"
             width={20}
             height={20}
             alt="Home Logo"
-            className="block"
+            className="block pr-1"
           />
-          <span className="text-lg font-semibold">Bukhari</span>
+          <span className="text-sm"><FontAwesomeIcon className="pr-1" icon={faChevronRight} width={6} height={6}/>Bukhari</span>
         </div>
 
         {/* This section is hidden from 1280px and visible below */}
         <div className="flex xl:hidden items-center">
-          {" "}
-          {/* Use `xl:hidden` to hide from 1280px onwards */}
-          <Image
-            src="/bread-crumb-book.svg"
-            width={20}
-            height={20}
-            alt="Home Logo"
-            className="block"
-          />
+          <FontAwesomeIcon icon={faBars} width={20}
+            height={20}/>
           <span className="text-lg font-semibold">555</span>
         </div>
       </div>
 
-      <div className="w-full bg-white p-4 flex flex-col h-full">
-        {" "}
-        {/* Set full height */}
-        <div className="flex justify-between items-center border-b pb-4 mb-4">
+      <div className="w-full overflow-y-auto rounded-bl-2xl rounded-br-2xl bg-white py-6 flex flex-col h-full">
+        <div className="flex justify-between items-center pb-4 mb-4 pl-6 pr-8">
           <div className="flex items-center">
             <span className="text-lg font-semibold">সহিহ বুখারী</span>
           </div>
 
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full border p-2 pl-10 rounded"
-            />
-            <FontAwesomeIcon
-              icon={faSearch}
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500"
-            />
-          </div>
+          <div className='relative border-2  rounded-lg'> 
+          <input
+            type="text"
+            placeholder="Search Hadith"
+            className="pl-10 pr-14 py-3 rounded bg-white text-black focus:outline-none"
+          />
+          <FontAwesomeIcon
+            icon={faSearch}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500"
+          />
         </div>
-        <div className="mb-4">
-          <p className={`text-gray-700 ${!seeMore ? "line-clamp-3" : ""}`}>
-            এখানে অনেক বিস্তারিত তথ্য থাকতে পারে যা প্রথমে দেখা যাবে না।
-            বিস্তারিত দেখতে, "See More" ক্লিক করুন। আপনি এই অংশটি ছোট করতে "See
-            Less" ক্লিক করতে পারেন। এটি প্রায় একটি নমুনা প্যারা যাতে আপনি "See
-            More" এবং "See Less" এর প্রভাব দেখতে পারেন। এখানে অনেক বিস্তারিত
-            তথ্য থাকতে পারে যা প্রথমে দেখা যাবে না। বিস্তারিত দেখতে, "See More"
-            ক্লিক করুন। আপনি এই অংশটি ছোট করতে "See Less" ক্লিক করতে পারেন। এটি
-            প্রায় একটি নমুনা প্যারা যাতে আপনি "See More" এবং "See Less" এর
-            প্রভাব দেখতে পারেন।
+        </div>
+        <div className="mb-4 border-b border-gray-100	pb-2 pl-6 pr-8">
+          <p className={`text-gray-700 text-sm ${!seeMore ? "line-clamp-2" : ""}`}>
+          সংকলক : শাইখ ইমামুল হুজ্জাহ আবু ‘আবদুল্লাহ মুহাম্মাদ বিন ইসমা’ঈল বিন ইবরাহীম বিন 
+          মুগীরাহ্‌ আল বুখারী আল-জু’ফী। মোট হাদীস সংখ্যা : ৭৫৬৩ টি। প্রকাশনী : 
+          তাওহীদ পাবলিকেশন্স। মৌলিক হাদীস গ্রন্থ হিসাবে সহীহুল বুখারী গ্রন্থটি হাদীসের 
+          কিতাবগুলির মধ্যে সর্বশ্রেষ্ঠ। শুধু তাই নয় এর সংশ্লিষ্ট ব্যক্তিগবের্গর সর্বজন স্বীকৃত মন্তব্য হলো : 
+          আল কুরআনের পরে মানব রচিত বা সংকলিত গ্রন্থের মধ্যে সর্বশ্রেষ্ঠ কিতাব নিঃসন্দেহে সহীহুল বুখারী। 
+          বুখারী সংকলন করতে গিয়ে ইমাম বুখারী (রহঃ) কে যে কী পরিমাণ পরিশ্রম ও সাধনা করতে হয়েছে তা 
+          বর্ণনাতীত। মহান আল্লাহ তা’আলা তাঁর এই পরিশ্রমকে ক্ববুল করুন এবং এ মহান সাদাকায়ে যারিয়ার জন্য 
+          তাঁকে জান্নাতুল ফেরদৌস-এর পুরষ্কারে ভুষিত করুন। - আমীন
           </p>
           <button
-            className="text-blue-500"
+            className="text-blue-500 text-xs"
             onClick={() => setSeeMore(!seeMore)}
           >
             {!seeMore ? "আরো দেখুন" : "লুকান"}
           </button>
         </div>
         {/* Scrollable Data Section */}
-        <div className="overflow-y-auto flex-1 space-y-2">
+        <div className="flex-1 px-4 space-y-2">
           {data.bukhari.map((item, index) => (
             <div
               key={index}
-              className="flex justify-between items-center bg-white border p-6 rounded hover:bg-green-100"
+              className="flex justify-between items-center border-b border-gray-100 bg-white px-6 py-7 rounded hover:bg-green-100"
               onMouseEnter={() => setHoveredItem(index)} 
               onMouseLeave={() => setHoveredItem(null)}
             >
@@ -124,9 +100,9 @@ const MiddleSection = () => {
                   hoveredItem={hoveredItem}
                   index={index}
                 />
-                <strong>{item.title}</strong>
+                <strong className="text-sm">{item.title}</strong>
               </div>
-              <div className="text-gray-500 ml-auto">{item.range}</div>
+              <div className="text-gray-500 ml-auto text-sm">{item.range}</div>
             </div>
           ))}
         </div>
