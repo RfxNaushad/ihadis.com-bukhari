@@ -100,7 +100,7 @@ const MiddleSection = () => {
                   hoveredItem={hoveredItem}
                   index={index}
                 />
-                <strong className="text-sm">{item.title}</strong>
+                <strong className="text-sm text-gray">{item.title}</strong>
               </div>
               <div className="text-gray-500 ml-auto text-sm">{item.range}</div>
             </div>
