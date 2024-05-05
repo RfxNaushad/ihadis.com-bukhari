@@ -15,7 +15,7 @@ const ProgressBarSection = () => {
                         max="100"
                         value={progress1}
                         onChange={(e) => setProgress1(parseInt(e.target.value))}
-                        className="w-full mt-2 thin-range"
+                        className="w-full mt-2 custom-range"
                     />
                     <h2>{progress1}</h2>
                 </div>
@@ -30,7 +30,7 @@ const ProgressBarSection = () => {
                         max="100"
                         value={progress2}
                         onChange={(e) => setProgress2(parseInt(e.target.value))}
-                        className="w-full mt-2 thin-range" 
+                        className="w-full mt-2 custom-range" 
                     />
                     <h2>{progress2}</h2>
                 </div>

@@ -46,17 +46,19 @@ const RightSection = () => {
         </div>
       </div>
       {/* Donation Box */}
-      <div className="bg-green-600 p-4 rounded-lg shadow mb-4" style={{backgroundColor: "#2b9e76"}}>
-        <h2 className="text-white text-xl">আপনিও সদাকায়ে জারিয়াতে অংশ নিন </h2>
+      <div className="bg-green-600 px-6 py-5 rounded-lg" style={{backgroundColor: "#34AB82"}}>
+        <h2 className="text-white text-xl mb-3">আপনিও সদাকায়ে জারিয়াতে অংশ নিন </h2>
         <p className="text-white text-sm mb-4">
           আপনার দান, সেটা ছোট হলেও, ইসলামের
           বার্তা ও হাদিস প্রচারে সহায়তা করবে। আমাদের কাজের অংশ হতে এবং এই
           গুরুত্বপূর্ণ কাজে সাহায্য করতে আমাদের প্রজেক্টে হাদিয়া দিন। ইনশাআল্লাহ
           এটি সদাকায়ে জারিয়াহ হিসেবে আল্লাহ্‌র কাছে কবুল হবে।
         </p>
-        <button className="px-4 py-3 rounded-lg items-center bg-white text-black" style={{color: "#2b9e76"}}>
-        সাপোর্ট করুন
-        </button>
+        <div className="flex justify-center"> {/* This flex container centers the button */}
+    <button className="px-8 py-3 rounded-lg bg-white" style={{ color: "#2b9e76" }}>
+      সাপোর্ট করুন
+    </button>
+  </div>
       </div>
     </section>
   );

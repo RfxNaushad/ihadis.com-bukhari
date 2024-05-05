@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import LeftSection from "./components/LeftSection";
@@ -6,51 +5,8 @@ import LeftSection from "./components/LeftSection";
 import MiddleSection from "./components/MiddleSection";
 import RightSection from "./components/RightSection";
 
-export async function getStaticProps() {
-  try {
-    // Fetch categories
-    const categoriesRes = await fetch(
-      "https://dua-server-gamma.vercel.app/categories"
-    );
-    const categories = await categoriesRes.json();
 
-    // Fetch sub-categories
-    const subCategoriesRes = await fetch(
-      "https://dua-server-gamma.vercel.app/sub-categories"
-    );
-    const subCategories = await subCategoriesRes.json();
-
-    // Fetch duas
-    const duasRes = await fetch("https://dua-server-gamma.vercel.app/duas");
-    const duas = await duasRes.json();
-
-    if (!categoriesRes.ok || !subCategoriesRes.ok || !duasRes.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    return {
-      props: {
-        categories,
-        subCategories,
-        duas,
-      },
-
-      revalidate: 3600,
-    };
-  } catch (error) {
-    console.error("Error fetching data:", error);
-
-    return {
-      props: {
-        categories: [],
-        subCategories: [],
-        duas: [],
-      },
-    };
-  }
-}
-
-function HomePage({ categories, subCategories, duas }) {
+function HomePage() {
   return (
     // <div className="flex flex-col h-screen">
     //   <Navbar />
@@ -86,8 +42,8 @@ function HomePage({ categories, subCategories, duas }) {
       <Sidebar />
     </aside>
 
-    <div className="flex h-full w-full overflow-hidden">
-      <section className="hidden xl:block xl:w-1/4 bg-gray-100 pl-4 pt-4 pb-4">
+    <div className="flex h-full w-full overflow-hidden rounded-tl-3xl">
+      <section className="hidden xl:block xl:w-1/4 bg-gray-100 pl-6 pt-4 pb-4">
         <LeftSection />
       </section>
 

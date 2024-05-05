@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars,faBook, faSearch,faArrowRightArrowLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faSearch, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import Hexagon from "./Hexagon";
 
