@@ -50,7 +50,7 @@ const MiddleSection = () => {
             alt="Home Logo"
             className="block"
           />
-          <span className="text-lg font-semibold">বুখারী</span>
+          <span className="text-lg font-semibold">Bukhari</span>
         </div>
 
         {/* This section is hidden from 1280px and visible below */}

@@ -19,6 +19,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #ffffff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 @layer utilities {
@@ -44,4 +45,26 @@ body.night-mode {
 
 body.night-mode p {
   color: white;
+}
+
+/* Custom scrollbar width */
+::-webkit-scrollbar {
+  width: 5px; /* Fixed width for vertical scrollbar */
+  height: 5px; 
+}
+
+/* Scrollbar track styling */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Scrollbar thumb styling */
+::-webkit-scrollbar-thumb {
+  background: #cecece; /* Scrollbar thumb color */
+  border-radius: 6px; 
+}
+
+/* Scrollbar thumb hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

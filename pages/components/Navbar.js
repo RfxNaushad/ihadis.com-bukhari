@@ -16,8 +16,8 @@ const Navbar = () => {
   }
 
   return (
-    <div className="flex items-center justify-between bg-gray-800 text-white p-4 h-24"> {/* Space between left and right sections */}
-      <div className="flex items-center space-x-2"> {/* Left side: logo and text */}
+    <div className="flex items-center justify-between bg-white text-black px-4 h-20"> {/* Space between left and right sections */}
+      <div className="flex items-center space-x-6"> {/* Left side: logo and text */}
         <Image
           src="/home-logo.png"
           width={45}
@@ -25,26 +25,27 @@ const Navbar = () => {
           alt="Home Logo"
           className="block" // Always visible
         />
-        <h2 className="hidden md:block"> {/* Visible on larger screens */}
+        <div>
+        <h2 className="hidden md:block text-base font-bold text-black"> {/* Visible on larger screens */}
           সূচিপত্র
-          <br /> 
-          <span>হাদিস পড়ুন শিখুন এবং জানুন</span>
         </h2>
+        <h4 className='text-xs'>হাদিস পড়ুন শিখুন এবং জানুন</h4>
+        </div>
         <h2 className="block md:hidden">আল হাদিস</h2>
 
       </div>
       
-      <div className="flex items-center space-x-2 relative"> {/* Right side: search bar, support button, and settings */}
+      <div className="flex items-center space-x-16 relative h-10"> {/* Right side: search bar, support button, and settings */}
         {/* Hide long search bar on smaller screens */}
-        <div className='hidden md:block relative'> 
+        <div className='hidden md:block relative border-2  rounded-lg'> 
           <input
             type="text"
-            placeholder="Search..."
-            className="px-10 py-2 rounded bg-white text-black focus:outline-none"
+            placeholder="Search Hadith"
+            className="pl-10 pr-14 py-3 rounded bg-white text-black focus:outline-none"
           />
           <FontAwesomeIcon
             icon={faSearch}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500" // Position inside the input
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500" // Position inside the input
           />
         </div>
         
@@ -54,7 +55,7 @@ const Navbar = () => {
         </button>
         
         {/* Support button for larger screens */}
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded flex items-center space-x-2 hidden md:block">
+        <button className=" text-white px-4 py-3 rounded-lg flex items-center space-x-2 hidden md:block" style={{backgroundColor: "#2B9E76"}}>
           <span>সাপোর্ট করুন</span>
           <FontAwesomeIcon icon={faHandHoldingHeart} />
         </button>

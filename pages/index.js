@@ -87,7 +87,7 @@ function HomePage({ categories, subCategories, duas }) {
     </aside>
 
     <div className="flex h-full w-full overflow-hidden">
-      <section className="hidden xl:block xl:w-1/4 bg-gray-100 p-4 border-r">
+      <section className="hidden xl:block xl:w-1/4 bg-gray-100 pl-4 pt-4 pb-4">
         <LeftSection />
       </section>
 
