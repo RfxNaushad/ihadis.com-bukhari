@@ -85,19 +85,19 @@ const LeftSection = ({ isSidebarOpen }) => {
 
     অধ্যায়: [
       { serial: 20, title: "সহিহ বুখারী", description: "সর্বমোট হাদিস - ৭৫৬৩" },
-      { serial: 2, title: "সহিহ মুসলিম", description: "সর্বমোট হাদিস - ৫৭৮৯" },
+      { serial: 21, title: "সহিহ মুসলিম", description: "সর্বমোট হাদিস - ৫৭৮৯" },
       {
-        serial: 3,
+        serial: 30,
         title: "সুনান আবু দাউদ",
         description: "সর্বমোট হাদিস - ৫২৬৪",
       },
       {
-        serial: 4,
+        serial: 40,
         title: "সুনান আত-তিরমিজি",
         description: "সর্বমোট হাদিস - ৪৫৮৯",
       },
       {
-        serial: 5,
+        serial: 50,
         title: "সুনান আন-নাসাই",
         description: "সর্বমোট হাদিস - ৫৬৩৭",
       },
