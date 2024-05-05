@@ -2,50 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: #ffffff;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-.light-theme {
-}
-
-.dark-theme {
-  --tw-bg-opacity: 1;
-  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
-  color: white;
-}
-
-body.night-mode {
-  color: white;
-  background-color: #252525; 
-}
-
-
-body.night-mode p {
-  color: white;
-}
 
 /* Custom scrollbar*/
 ::-webkit-scrollbar {

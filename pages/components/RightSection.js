@@ -15,10 +15,10 @@ const RightSection = () => {
             আরবি ফন্ট সিলেক্ট করুন
           </label>
           <select className="border py-3 pl-3 outline-none w-full rounded-lg">
-            <option className="p-8 text-sm">KFGQ</option>
-            <option className="p-8 text-sm">Me Quran</option>
-            <option className="p-8  text-sm">Al Mushaf</option>
-            <option className="p-8 text-sm">Arial</option>
+            <option className="p-8 text-black text-sm">KFGQ</option>
+            <option className="p-8 text-black text-sm">Me Quran</option>
+            <option className="p-8  text-black text-sm">Al Mushaf</option>
+            <option className="p-8 text-black text-sm">Arial</option>
           </select>
         </div>
 

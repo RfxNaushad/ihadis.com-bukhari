@@ -37,7 +37,8 @@ const MiddleSection = () => {
             alt="Home Logo"
             className="block pr-1"
           />
-          <span className="text-sm"><FontAwesomeIcon className="pr-1" icon={faChevronRight} width={6} height={6}/>Bukhari</span>
+          <h2 className="text-sm text-black">
+          <FontAwesomeIcon className="pr-1" icon={faChevronRight} width={6} height={6}/>Bukhari</h2>
         </div>
 
         {/* This section is hidden from 1280px and visible below */}
@@ -51,7 +52,7 @@ const MiddleSection = () => {
       <div className="w-full overflow-y-auto rounded-bl-2xl rounded-br-2xl bg-white py-6 flex flex-col h-full">
         <div className="flex justify-between items-center pb-4 mb-4 pl-6 pr-8">
           <div className="flex items-center">
-            <span className="text-lg font-semibold">সহিহ বুখারী</span>
+            <h2 className="text-lg font-semibold text-gray-700">সহিহ বুখারী</h2>
           </div>
 
           <div className='relative border-2  rounded-lg'> 
@@ -100,7 +101,7 @@ const MiddleSection = () => {
                   hoveredItem={hoveredItem}
                   index={index}
                 />
-                <h2 className="text-sm text-gray">{item.title}</h2>
+                <h4 className="font-bold text-sm text-gray-800">{item.title}</h4>
               </div>
               <div className="text-gray-500 ml-auto text-sm">{item.range}</div>
             </div>

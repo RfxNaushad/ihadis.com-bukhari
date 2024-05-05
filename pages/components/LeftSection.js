@@ -188,7 +188,7 @@ const LeftSection = ({ isSidebarOpen }) => {
                 onMouseLeave={() => setHoveredItem(null)}
               >
                 <div
-                  className={`w-12 h-12 relative flex items-center justify-center bg-gray-100 text-gray ${
+                  className={`w-12 h-12 relative flex items-center justify-center bg-gray-100 text-black ${
                     hoveredItem === index ? "bg-green-500" : "bg-gray-100"
                   }`}
                   style={{
